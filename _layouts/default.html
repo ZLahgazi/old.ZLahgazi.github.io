@@ -1,11 +1,33 @@
-{{ content }}
-<main class="page-content" aria-label="Content">
-  <div class="wrapper">
-    {{ content }}
-    <div class="social-links">
-      <a href="https://github.com/ZLahgazi">GitHub</a> |
-      <a href="https://www.linkedin.com/in/zak-lahgazi-alaoui/">LinkedIn</a>
-    </div>
-  </div>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="wrapper">
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+      </div>
+    </header>
 
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+        <div class="social-links">
+          <a href="https://github.com/ZLahgazi">GitHub</a> |
+          <a href="https://www.linkedin.com/in/zak-lahgazi-alaoui/">LinkedIn</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="wrapper">
+        <p>© {{ site.time | date: '%Y' }} {{ site.title }}</p>
+      </div>
+    </footer>
+  </body>
+</html>
